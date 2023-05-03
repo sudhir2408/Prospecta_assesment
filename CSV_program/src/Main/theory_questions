@@ -1,0 +1,64 @@
+
+
+Ques 1: what is CSV file? 
+Ans:    A CSV (Comma-Separated Values) file is a plain text file that stores tabular data in a simple text format.
+        Each line in the file represents a row in the table, and each field or column within that row is separated by a comma.
+        The first line in the file typically contains the column names or headers, which describe the data in each column. 
+        CSV files are often used to exchange data between different programs or systems,
+        as they can be easily read and parsed by a wide range of software applications
+
+      There are following ways to print an array in Java:
+
+       1)Java Scanner class
+       2)Java String.split() method
+       3)Using OpenCSV API
+       
+ Ques2 :  How will you tackle the challenge above?
+
+Ans: To tackle the challenge of processing the CSV input and calculating the formulas in Java, I would suggest the following approach:
+
+    1)Read the CSV input file and store the data in a data structure such as a 2D array or a Map.
+      The row and column indices of the array or keys of the Map should correspond to the cell references in the CSV file.
+
+     2)Iterate through the data structure and check each cell for whether it contains a formula or a value.
+      A formula can be identified by checking if the cell value starts with the "=" symbol.
+
+     3)If the cell contains a formula, evaluate the formula using a mathematical expression . 
+     Pass the values of the referenced cells as variables to the evaluator, and store the result in the corresponding cell.
+
+    4)If the cell contains a value, simply copy the value to the corresponding cell in the output CSV file.
+
+    5)Write the processed data to a new CSV output file.
+    
+    
+    
+
+Ques3:  What type of errors you would you check for?
+
+Ans: When parsing and evaluating the CSV file, I would check for the following types of errors:
+
+   1)Syntax errors in the CSV file, such as missing commas or quotation marks.
+   2)Invalid formula expressions, such as referencing an invalid cell or using an unknown function.
+   3)Division by zero errors.
+   4)Data type errors, such as attempting to perform a calculation on a non-numeric value.
+   5)File input/output errors, such as trying to read from or write to a file that does not exist or that the program does not have permission to access.
+
+
+
+
+Ques3:  How might a user break your code?
+
+Answer:  A user could break the code in various ways, some of which are:
+
+     1)Providing invalid CSV input format: If the CSV file is not in the correct format, the program may not be able to read the
+      data correctly and may throw errors.
+
+     2)Providing incorrect formulas: If the user provides incorrect formulas or references non-existent cells, the program may not be able to
+       calculate the values correctly.
+
+     4)Providing large datasets: If the CSV file is very large, the program may run out of memory or take a long time to process the data.
+
+      5)Modifying the CSV file while the program is running: If the user modifies the CSV file while the program is running,
+      the program may not be able to read the updated data correctly and may produce incorrect results.
+
+ 
